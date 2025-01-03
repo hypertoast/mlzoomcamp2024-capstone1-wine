@@ -31,9 +31,7 @@ This capstone project focuses on developing a machine learning system to predict
 
 ### Screenshots (TBC)
 
-![Deploy API service via Docker](screenshots/docker-service-deploy.JPG)
-
-![Calling Docker Deployed API locally](screenshots/calling-docker-flask-api-locally.JPG)
+![Deploy API service via Docker](docker-run.JPG)
 
 ## Project Structure (TBC)
 
