@@ -36,7 +36,23 @@ This capstone project focuses on developing a machine learning system to predict
 ## Project Structure (TBC)
 
 ```
-
+wine-prediction
+├── Dockerfile
+├── EDA-Model-Eval.ipynb
+├── Pipfile
+├── Pipfile.lock
+├── docker-run.JPG
+├── model
+│   ├── feature_importance.csv
+│   └── wine_model.pkl
+├── model.py
+├── predict.py
+├── readme.md
+├── requirements.txt
+├── test.py
+├── train.py
+├── train_utils.py
+└── winequality.csv
 ```
 
 ## Exploratory Data Analysis
