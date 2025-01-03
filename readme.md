@@ -337,7 +337,31 @@ Key features include:
    - Endpoints:
      * /predict (POST)
      * /ping (GET)
-   - JSON request/response
+   - JSON request/ response
+    Request:
+    ```json
+    {
+        "fixed acidity": 7.4,
+        "volatile acidity": 0.7,
+        "citric acid": 0,
+        "residual sugar": 1.9,
+        "chlorides": 0.076,
+        "free sulfur dioxide": 11,
+        "total sulfur dioxide": 34,
+        "density": 0.9978,
+        "pH": 3.51,
+        "sulphates": 0.56,
+        "alcohol": 9.4
+    }
+    ```
+    Response:
+    ```json
+    {
+        "high": 0,
+        "low": 0.98,
+        "medium": 0.02
+    }
+    ```
    - Error handling
    - Request logging
 
@@ -427,7 +451,61 @@ These test results validate our choice of Random Forest Classifier:
 - Shows good balance between decisive predictions and uncertainty
 
 
-## 9. Limitations and Future Improvements
+## 9. Setup and Development
+
+### Prerequisites
+- Python 3.10+
+- Pipenv (`pip install pipenv`)
+
+### Local Development
+
+1. Clone the repository
+```bash
+git clone https://github.com/hypertoast/mlzoomcamp2024-capstone1-wine
+cd mlzoomcamp2024-capstone1-wine
+```
+
+2. Set up Environment and Install Dependencies
+```bash
+# Install dependencies using Pipenv
+pipenv install
+
+# Activate virtual environment
+pipenv shell
+```
+
+3. Run the Application
+```bash
+# Train model (if needed)
+python scripts/train.py
+
+# Start the API service
+python scripts/predict.py
+```
+
+### Docker Deployment
+- Docker implementation
+- Python 3.12 slim base image
+- Security considerations (non-root user)
+- Environment variable configuration
+
+```bash
+# Build Docker image
+docker build -t wine-quality-prediction-api .
+
+# Run container
+docker run -p 9696:9696 wine-quality-prediction-api
+```
+
+## Security Considerations
+
+- Non-root user in Docker container
+- Input validation
+- Error handling
+- Secure dependencies
+
+
+## 10. Limitations and Future Improvements
 
 ### Current Limitations
 1. Data Constraints:
@@ -492,7 +570,7 @@ These test results validate our choice of Random Forest Classifier:
    - Production optimization
    - Inventory management support
 
-## 10. Conclusions
+## 11. Conclusions
 ### Achievements
 - Successfully developed wine quality prediction system
 - Achieved 75% accuracy with balanced performance
