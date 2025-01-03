@@ -29,11 +29,11 @@ This capstone project focuses on developing a machine learning system to predict
 - Real-time API predictions
 - Containerized deployment
 
-### Screenshots (TBC)
+### Screenshots
 
 ![Deploy API service via Docker](docker-run.JPG)
 
-## Project Structure (TBC)
+## Project Structure
 
 ```
 wine-prediction
