@@ -1,3 +1,12 @@
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Pipenv](https://img.shields.io/badge/pipenv-managed-blue)](https://pipenv.pypa.io/en/latest/)
+[![Docker](https://img.shields.io/badge/docker-enabled-blue)](https://www.docker.com/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Framework](https://img.shields.io/badge/framework-Flask-yellow.svg)](https://flask.palletsprojects.com/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0.2-orange)](https://scikit-learn.org/)
+
+
 # mlzoomcamp2024-Capstone1
 
 This is the Capstone project submission for the [MLZoomCamp 2024 cohort](https://github.com/DataTalksClub/machine-learning-zoomcamp/tree/master)
@@ -5,6 +14,39 @@ This is the Capstone project submission for the [MLZoomCamp 2024 cohort](https:/
 [Evaluation Criteria](https://docs.google.com/spreadsheets/d/e/2PACX-1vQCwqAtkjl07MTW-SxWUK9GUvMQ3Pv_fF8UadcuIYLgHa0PlNu9BRWtfLgivI8xSCncQs82HDwGXSm3/pubhtml)
 
 # Wine Quality Prediction
+
+
+## Table of Contents
+1. [Problem Description](#problem-description)
+   - [Target Audience](#target-audience)
+   - [Key Features](#key-features)
+2. [Project Structure](#project-structure)
+3. [Setup and Development](#setup-and-development)
+   - [Prerequisites](#prerequisites)
+   - [Local Development](#local-development)
+   - [Docker Deployment](#docker-deployment)
+4. [Exploratory Data Analysis](#exploratory-data-analysis)
+   - [About Dataset](#about-dataset)
+   - [Initial Data Analysis](#1-initial-data-analysis)
+   - [Feature Distribution Analysis](#feature-distribution-analysis)
+   - [Correlation Analysis](#correlation-analysis)
+5. [Data Preparation](#3-data-preparation)
+   - [Feature Engineering](#feature-engineering)
+   - [Feature Selection](#feature-selection)
+6. [Model Development](#4-model-development)
+   - [Regression Approach](#regression-approach)
+   - [Classification Approach](#classification-approach)
+7. [Model Evaluation](#6-model-evaluation)
+   - [Performance Analysis](#performance-analysis)
+   - [Error Analysis](#error-analysis)
+8. [Implementation](#7-implementation)
+   - [Model Deployment](#model-deployment)
+   - [API Development](#api-development)
+9. [Test Results](#8-model-test-predictions-analysis)
+10. [Security Considerations](#security-considerations)
+11. [Limitations and Future Improvements](#10-limitations-and-future-improvements)
+12. [Conclusions](#11-conclusions)
+
 
 ## Problem Description
 The wine industry relies heavily on expert wine tasters to evaluate and grade wines, which is a time-consuming and subjective process. By developing an automated quality prediction system based on objective chemical measurements, we can:
