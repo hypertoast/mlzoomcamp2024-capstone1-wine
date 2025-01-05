@@ -60,6 +60,9 @@ The wine industry relies heavily on expert wine tasters to evaluate and grade wi
 
 This capstone project focuses on developing a machine learning system to predict wine quality based on physicochemical properties. Using the renowned UCI Wine Quality [Dataset](https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv), this project demonstrates the practical application of machine learning concepts and best practices learned throughout the MLZoomCamp course.
 
+This project has been deployed live at [render.com free tier service](https://mlzoomcamp2024-capstone1-wine.onrender.com). API calls details are available in the [Cloud Deployment Section](#cloud-deployment)
+
+
 ### Target Audience
 - Winemakers and Production Teams: Benefit from rapid quality assessment tools during production
 - Quality Control Managers: Gain objective metrics for consistency checking
@@ -576,21 +579,7 @@ curl -X POST http://localhost:9696/predict \
 ### Cloud Deployment
 Windows:
 ```bash
-curl -X POST "https://mlzoomcamp2024-capstone1-wine.onrender.com/predict" \
-     -H "Content-Type: application/json" \
-     -d "{
-         \"fixed acidity\": 7.4,
-         \"volatile acidity\": 0.7,
-         \"citric acid\": 0,
-         \"residual sugar\": 1.9,
-         \"chlorides\": 0.076,
-         \"free sulfur dioxide\": 11,
-         \"total sulfur dioxide\": 34,
-         \"density\": 0.9978,
-         \"pH\": 3.51,
-         \"sulphates\": 0.56,
-         \"alcohol\": 9.4
-     }"
+curl -X POST https://mlzoomcamp2024-capstone1-wine.onrender.com/predict -H "Content-Type: application/json" -d "{ \"fixed acidity\": 7.4, \"volatile acidity\": 0.7, \"citric acid\": 0, \"residual sugar\": 1.9, \"chlorides\": 0.076, \"free sulfur dioxide\": 11, \"total sulfur dioxide\": 34, \"density\": 0.9978, \"pH\": 3.51, \"sulphates\": 0.56, \"alcohol\": 9.4 }"
 ```
 Linux:
 ```bash
