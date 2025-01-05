@@ -25,6 +25,7 @@ This is the Capstone project submission for the [MLZoomCamp 2024 cohort](https:/
    - [Prerequisites](#prerequisites)
    - [Local Development](#local-development)
    - [Docker Deployment](#docker-deployment)
+   - [Cloud Deployment](#cloud-deployment)
 4. [Exploratory Data Analysis](#exploratory-data-analysis)
    - [About Dataset](#about-dataset)
    - [Initial Data Analysis](#1-initial-data-analysis)
@@ -570,6 +571,55 @@ curl -X POST http://localhost:9696/predict \
          "sulphates": 0.56,
          "alcohol": 9.4
      }'
+```
+
+### Cloud Deployment
+Windows:
+```bash
+curl -X POST "https://mlzoomcamp2024-capstone1-wine.onrender.com/predict" \
+     -H "Content-Type: application/json" \
+     -d "{
+         \"fixed acidity\": 7.4,
+         \"volatile acidity\": 0.7,
+         \"citric acid\": 0,
+         \"residual sugar\": 1.9,
+         \"chlorides\": 0.076,
+         \"free sulfur dioxide\": 11,
+         \"total sulfur dioxide\": 34,
+         \"density\": 0.9978,
+         \"pH\": 3.51,
+         \"sulphates\": 0.56,
+         \"alcohol\": 9.4
+     }"
+```
+Linux:
+```bash
+curl -X POST https://mlzoomcamp2024-capstone1-wine.onrender.com/predict \
+     -H "Content-Type: application/json" \
+     -d '{
+         "fixed acidity": 7.4,
+         "volatile acidity": 0.7,
+         "citric acid": 0,
+         "residual sugar": 1.9,
+         "chlorides": 0.076,
+         "free sulfur dioxide": 11,
+         "total sulfur dioxide": 34,
+         "density": 0.9978,
+         "pH": 3.51,
+         "sulphates": 0.56,
+         "alcohol": 9.4
+     }'
+```
+Response:
+```bash
+{
+  "probability": {
+    "high": 0.0,
+    "low": 0.98,
+    "medium": 0.02
+  },
+  "quality_prediction": "low"
+}
 ```
 
 ## Security Considerations
