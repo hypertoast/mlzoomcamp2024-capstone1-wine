@@ -577,6 +577,10 @@ curl -X POST http://localhost:9696/predict \
 ```
 
 ### Cloud Deployment
+
+> [!WARNING]  
+> The model is deployed on a FREE tier of Render. So, the first response may be a bit delayed (around 50seconds or more). But subsequent ones should be quick
+
 Windows:
 ```bash
 curl -X POST https://mlzoomcamp2024-capstone1-wine.onrender.com/predict -H "Content-Type: application/json" -d "{ \"fixed acidity\": 7.4, \"volatile acidity\": 0.7, \"citric acid\": 0, \"residual sugar\": 1.9, \"chlorides\": 0.076, \"free sulfur dioxide\": 11, \"total sulfur dioxide\": 34, \"density\": 0.9978, \"pH\": 3.51, \"sulphates\": 0.56, \"alcohol\": 9.4 }"
